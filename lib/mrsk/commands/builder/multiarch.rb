@@ -10,7 +10,7 @@ class Mrsk::Commands::Builder::Multiarch < Mrsk::Commands::Builder::Base
   def push
     docker :buildx, :build,
       "--push",
-      "--platform", "linux/amd64,linux/arm64",
+      "--platform", "linux/amd64",
       "--builder", builder_name,
       *build_options,
       build_context
